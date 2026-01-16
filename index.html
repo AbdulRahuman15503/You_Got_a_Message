@@ -44,10 +44,10 @@
                   </div>
 
                   <div id = "message-box"></div>
-                <!-- <div id="clock-box">
+                <div id="clock-box">
                     <span class="STYLE1"></span><font color="#EECB9C"></font>
 <span class="STYLE1"></span>
-                  <div id="clock"></div> -->
+                  <div id="clock"></div>
               </div>
                 <canvas id="canvas" width="1100" height="680"></canvas>
             </div>
@@ -186,21 +186,15 @@
             }
         }));
 
-      //   var textAnimate = eval(Jscex.compile("async", function () {
-		    // var together = new Date();
-		    // together.setFullYear(2006, 09, 04); 			
-		    // together.setHours(00);						
-		    // together.setMinutes(0);					
-		    // together.setSeconds(0);					
-		    // together.setMilliseconds(2);				
+        var textAnimate = eval(Jscex.compile("async", function () {			
 
-		    // $("#code").show().typewriter();
-      //       $("#clock-box").fadeIn(500);
-      //       while (true) {
-      //           timeElapse(together);
-      //           $await(Jscex.Async.sleep(1000));
-      //       }
-        // }));
+		    $("#code").show().typewriter();
+            $("#clock-box").fadeIn(500);
+            while (true) {
+                timeElapse(together);
+                $await(Jscex.Async.sleep(1000));
+            }
+        }));
 
         var runAsync = eval(Jscex.compile("async", function () {
             $await(seedAnimate());
@@ -216,6 +210,7 @@
         runAsync().start();
     })();
     </script></body></html>
+
 
 
 
